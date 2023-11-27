@@ -35,7 +35,6 @@
 }
 
 html {
-  box-sizing: border-box;
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
@@ -45,6 +44,8 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: var(--text-color);
+  box-sizing: border-box;
+
 }
 .container {
   width: var(--container-large);
@@ -349,7 +350,7 @@ article {
 article .bx {
   cursor: default;
 }
-.services {
+#services {
   text-align: center;
   position: relative;
 }
@@ -411,21 +412,23 @@ footer nav {
   justify-content: center;
 }
 
-@media only screen and (max-width: 75em) {
-  html {
-    font-size: 50%;
+@media only screen and (max-width: 1196px) {
+  .container {
+    width: var(--container-medium);
   }
   section {
     height: 100vh;
-    padding-top: 2rem;
-    margin: 0 1rem;
-    min-height: fit-content;
+    padding-top: 2.5rem;
+    margin: 0 2%;
   }
   .profile__img-content {
-    margin-left: 12.5rem;
-    margin-top: 3rem;
+    margin-left: 41rem;
     height: 200px;
     width: 200px;
+  }
+  .profile__content {
+    padding: 2rem;
+    grid-column: 1 / 2;
   }
 
   #desktop-nav {
@@ -437,67 +440,19 @@ footer nav {
     justify-content: space-between;
     padding: 2rem;
   }
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
-  }
-  #profile,
-  .section-container {
-    display: block;
+  #profile {
+    grid-template-columns: 1fr;
   }
   .arrow {
     display: none;
   }
-  .container {
-    max-width: 100%;
-    width: 100%;
-    margin: 0;
-  }
-  .about__container {
-    flex-direction: column;
-  }
-  .about-containers {
-    flex-direction: column;
-  }
-  .experience__content {
-    flex-direction: column;
-    margin-top: 2rem;
-  }
-  .services__containers {
-    grid-template-columns: 1fr;
-  }
   .about__img-container {
     height: 350px;
     width: 250px;
-    margin-left: 7rem;
-    margin-top: 1rem;
-  }
-  #experience {
-    height: 100vh;
-    padding: 0 4rem;
-    margin-top: 0;
-  }
-  #about {
-    margin-top: -30rem;
   }
   #services {
-    padding: 0 4rem;
-    margin-top: -50rem;
-  }
-  #contact {
-    height: 30vh;
-    margin-top: 10rem;
-  }
-  footer {
-    height: 10vh;
-    margin: 0;
-  }
-  footer .nav-links{
-    flex-direction: column;
-  }
-
-  .about-content {
-    margin-top: 3rem;
+    height: 80vh;
+    margin-top: -10rem;
   }
   .service__img-container {
     height: 150px;
@@ -506,56 +461,183 @@ footer nav {
   .service__img-container img {
     width: 100%;
     height: 100%;
+    object-fit: contain;
   }
+  #experience {
+    margin-top: -15rem;
+  }
+  #contact {
+    height: 30vh;
+  }
+  footer {
+    margin-top: 2rem;
+  }
+}
+@media only screen and (max-width: 1120px) {
+  html {
+    font-size: 50.7%;
+  }
+  .container {
+    width: var(--container-small);
+    max-width: fit-content;
+  }
+  section {
+    padding-top: 2rem;
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 1118px) {
+  .container {
+    padding: 0 5rem;
+  }
+  .services__containers {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #services {
+    height: 100vh;
+  }
+  #contact {
+    margin-top: 15rem;
+  }
+}
+@media only screen and (max-width: 946px) {
+  .profile__img-content {
+    margin-left: 34rem;
+  }
+  #experience {
+    margin-top: -10rem;
+  }
+  .about__img-container {
+    height: 400px;
+    width: 300px;
+    flex: 0 0 25%;
+  }
+  .about-details-container {
+    padding: 2.5rem;
+  }
+}
+@media only screen and (max-width: 896px) {
+  .profile__img-content {
+    margin-left: 28rem;
+  }
+  .about-containers {
+    flex-direction: column;
+  }
+  .about-content {
+    margin-top: 3rem;
+  }
+  .about__img-container {
+    height: 400px;
+    width: 300px;
+    flex: 0 0 35%;
+  }
+  #experience {
+    margin-top: 2rem;
+  }
+}
+@media only screen and (max-width: 741px) {
+  .profile__img-content {
+    margin-left: 22rem;
+  }
+  #experience {
+    height: 100vh;
+    margin-top: 5rem;
+  }
+  .experience__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #services {
+    height: 100vh;
+    margin-top: -10rem;
+  }
+  .services__containers {
+    grid-template-columns: 1fr;
+  }
+  #contact {
+    margin-top: 50rem;
+  }
+}
+@media only screen and (max-width: 647px) {
+  .profile__img-content {
+    margin-left: 18rem;
+  }
+  .about__container {
+    flex-direction: column;
+  }
+  .about__img-container {
+    margin-left: 12.4rem;
+  }
+  #experience {
+    margin-top: 35rem;
+  }
+}
+@media only screen and (max-width: 556px) {
   .contact-info-upper-container {
     flex-direction: column;
     margin: 1rem auto;
-    padding: 0 3rem;
+    padding: 0;
+    width: 100%;
   }
-}
-
-@media only screen and (max-width: 68.75em){
-
-}
-
-@media only screen and (max-width: 56.25em) {
-  .profile__img-content{
-    margin-left: 10rem;
+  #experience {
+    margin-top: 40rem;
   }
-  #about{
-    margin-top: -5rem;
-  }
-  #experience{
-    margin-top: 30rem;
+  .experience__content {
+    grid-template-columns: 1fr;
   }
   #services{
-    margin-top: -25rem;
+    margin-top: 1rem;
   }
-  #contact{
-    margin-top: 37rem;
+  #about{
+    margin-top: 6rem;
   }
-}
-
-@media only screen and (max-width: 31.25em) {
-  .profile__img-content{
+  .about__img-container {
+    margin-left: 7rem;
+  }
+  .profile__img-content {
     margin-left: 13rem;
   }
-  .about__img-container{
-    margin-left: 10rem;
+  
+}
+@media only screen and (max-width: 494px){
+  footer .nav-links {
+    flex-direction: column;
   }
   #about{
-    margin-top: -37rem;
+    margin-top: 11.5rem;
   }
-  #experience{
-    margin-top: -6rem;
+  .about__img-container {
+    margin-left: 5rem;
   }
-  #services{
-    margin-top: -53rem;
-  }
-  #contact{
-    margin-top: 5rem;
-  }
-  footer{
-    padding: 0 1rem;
+  .profile__img-content {
+    margin-left: 10rem;
   }
 }
+@media only screen and (max-width: 410px) {
+  .container {
+    padding: 0 2rem;
+  }
+  #about{
+    margin-top: 15rem;
+  }
+  .about__img-container {
+    margin-left: 3rem;
+  }
+  .profile__img-content {
+    margin-left: 8rem;
+  }
+  #experience {
+    margin-top: 45rem;
+  }
+}
+@media only screen and (max-width: 369px) {
+  .container {
+    padding: 0 1rem;
+  }
+  section {
+    margin: 0 1%;
+  }
+}
+
+
+
