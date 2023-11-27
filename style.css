@@ -638,6 +638,65 @@ footer nav {
     margin: 0 1%;
   }
 }
+@media only screen and (max-width: 1366px){
+  
+}
+@media only screen and (max-width: 1180px){}
+@media only screen and (max-width: 1024px){}
+@media only screen and (max-width: 932px){
+  #services{
+    padding-top: -30rem;
+    background-color: red;
+  }
+  #experience{
+    height: 50vh;
+  }
+  
+}
+
+@media only screen and (max-width: 896px){
+  section{
+    min-height: fit-content;
+  }
+  .profile{
+    height: 80vh;
+  }
+  .profile__content{
+    height: min-content;
+  }
+  .profile__img-content{
+    margin-left: 8rem;
+  }
+  .about__img-container{
+    margin-left: 2rem;
+  }
+  .about{
+    margin-bottom: -25rem;
+  }
+  .services{
+    margin-bottom: -25rem;
+  }
+  #experience{
+    height: 80vh;
+  }
+}
+
+@media only screen and (max-width: 667px){
+  #about{
+    margin-top: -7rem;
+  }
+  #experience{
+    margin-top: 28rem;
+  }
+  #services{
+    margin-top: -19rem;
+  }
+  #contact{
+    margin-top: 38rem;
+  }
+}
+
+
 
 
 
