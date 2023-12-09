@@ -646,7 +646,6 @@ footer nav {
 @media only screen and (max-width: 932px){
   #services{
     padding-top: -30rem;
-    background-color: red;
   }
   #experience{
     height: 50vh;
